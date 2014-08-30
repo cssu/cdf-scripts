@@ -1,4 +1,4 @@
-cssu-scheduler
-==============
+cdf-scripts
+===========
 
-Automated backups and site deployment for CSSU content hosted on CDF.
+Deployment scripts and backup automation for CSSU content hosted on CDF.
