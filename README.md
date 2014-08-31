@@ -11,8 +11,8 @@ First, clone this repository into the home directory of the `cssuwww` user on CD
 
 Initialize the `backup` submodule:
 
-	git submodule init
-	git submodule update
+    git submodule init
+    git submodule update
 
 Then make sure dependencies are installed:
 
@@ -24,8 +24,8 @@ Then make sure dependencies are installed:
 
 To update the `backup` submodule:
 
-	git submodule foreach git pull
-	git commit -am 'Update submodule'
+    git submodule foreach git pull
+    git commit -am 'Update submodule'
 
 ## Tasks
 
