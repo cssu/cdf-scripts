@@ -1,3 +1,4 @@
 [submodule "backup"]
 	path = backup
 	url = git@bitbucket.org:cssu/cssu-backup.git
+	branch = master
