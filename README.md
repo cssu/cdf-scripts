@@ -11,6 +11,7 @@ First, clone this repository into the home directory of the `cssuwww` user on CD
 
 Initialize the `backup` submodule:
 
+    cd ~/cdf-scripts/
     git submodule init
     git submodule update
 
