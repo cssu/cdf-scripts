@@ -1,6 +1,6 @@
 # Execute the backup script
 every 1.day, at: '4:00 am' do
-  command 'cd ~/Backup/ && /u/cssuwww/.rbenv/shims/bundle exec backup perform -t cssu_backup'
+  rake 'backup'
 end
 
 # Recompile the site to 
