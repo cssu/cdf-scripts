@@ -19,5 +19,3 @@ rsync --archive --delete --exclude-from=.rsyncexclude --verbose _site/ $PUBLIC_W
 # Remove the temporary repo
 cd ~
 rm -rf $TMP_GIT_CLONE
-
-exit
