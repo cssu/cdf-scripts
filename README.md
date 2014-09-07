@@ -17,8 +17,10 @@ Initialize the `backup` submodule:
 
 Then make sure dependencies are installed:
 
-    cd ~/cdf-scripts/
     gem install bundler
+    cd ~/cdf-scripts/
+    bundle install
+    cd backup/
     bundle install
 
 ## Updating
