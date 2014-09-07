@@ -25,8 +25,7 @@ Then make sure dependencies are installed:
 
 To update the `backup` submodule:
 
-    git submodule foreach git pull
-    git submodule update
+    git submodule update --rebase
 
 ## Tasks
 
