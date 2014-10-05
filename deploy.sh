@@ -10,7 +10,7 @@ git clone $GIT_REPO $TMP_GIT_CLONE
 cd $TMP_GIT_CLONE
 
 # Use Jekyll to generate the static site
-jekyll build
+bundle exec jekyll build
 
 # Copy the static site to htdocs, ignoring specific files
 echo "Copying site to $PUBLIC_WWW ..."
