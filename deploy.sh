@@ -18,7 +18,6 @@ if [ -r .rsyncexclude ]; then
   rsync --archive --delete --exclude-from=.rsyncexclude _site/ $PUBLIC_WWW
 else
   rsync --archive --delete _site/ $PUBLIC_WWW
-  rsync --archive --delete . $PUBLIC_WWW
 fi
 echo "Done copying!"
 
