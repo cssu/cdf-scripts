@@ -7,5 +7,7 @@ end
 
 desc 'Build the static Jekyll site and deploy it by copying it to `/space/data/www/cssu/htdocs/`'
 task :deploy do
-  system './deploy.sh'
+  Bundler.with_clean_env do
+    system './deploy.sh'
+  end
 end
