@@ -1,7 +1,20 @@
 #!/bin/bash -l
-GIT_REPO=$HOME/cssu.cdf.toronto.edu.git
-TMP_GIT_CLONE=$HOME/tmp/cssu.cdf.toronto.edu
+set -e
+
+# Set UTF-8 as default locale
+export LC_ALL="C.UTF-8"
+
+GIT_REPO=$HOME/cssu.ca.git
+TMP_GIT_CLONE=$HOME/tmp/cssu.ca
 PUBLIC_WWW=/space/data/www/cssu/htdocs
+
+remove_tmp_repo () {
+  # Remove the temporary repo
+  cd ~
+  rm -rf $TMP_GIT_CLONE
+}
+# If there's an error, always remove the temporary repo
+trap remove_tmp_repo ERR
 
 # Clone the bare repo into a temporary repo with a working copy
 git clone $GIT_REPO $TMP_GIT_CLONE
@@ -12,11 +25,6 @@ cd $TMP_GIT_CLONE
 # Use Jekyll to generate the static site
 echo "Building Jekyll site..."
 bundle install && bundle exec jekyll build
-
-if [ $? -ne 0 ]; then
-  echo "Failed to build Jekyll site!"
-  exit 1
-fi
 
 echo "Successfully built Jekyll site!"
 
@@ -30,5 +38,4 @@ fi
 echo "Done copying!"
 
 # Remove the temporary repo
-cd ~
-rm -rf $TMP_GIT_CLONE
+remove_tmp_repo
