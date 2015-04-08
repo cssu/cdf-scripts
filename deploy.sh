@@ -24,6 +24,7 @@ cd $TMP_GIT_CLONE
 
 # Use Jekyll to generate the static site
 echo "Building Jekyll site..."
+gem install bundler
 bundle install && bundle exec jekyll build
 
 echo "Successfully built Jekyll site!"
